@@ -118,11 +118,11 @@ Dataset yang digunakan merupakan dataset yang umum digunakan untuk memprediksi c
 - **Resample untuk Data Kelas Minoritas**:
   Teknik resample data adalah suatu metode yang digunakan dalam pra-pemrosesan data, khususnya dalam Machine Learning, untuk mengatasi ketidakseimbangan kelas (imbalanced class) dalam dataset. Ketidakseimbangan kelas terjadi ketika jumlah data pada satu kelas jauh lebih banyak daripada kelas lainnya. Kondisi ini dapat menyebabkan model Machine Learning menjadi bias terhadap kelas mayoritas dan mengabaikan kelas minoritas.
 
-      Dalam Dataset yang digunakan,Kolom Exited untuk kelas
-      Sebelum Oversampling | Jumlah | Sedudah OverSampling | Jumlah
-      --------|---------|-------|-----|
-      Tidak Exited/Churn (0) | 7963 | Tidak Exited/Churn (0) | 7963
-      Exited/Churn (1) | 2037 | Exited/Churn (1) | 7963
+    Dalam Dataset yang digunakan,Kolom Exited untuk kelas
+    Sebelum Oversampling | Jumlah | Sedudah OverSampling | Jumlah
+    --------|---------|-------|-----|
+    Tidak Exited/Churn (0) | 7963 | Tidak Exited/Churn (0) | 7963
+    Exited/Churn (1) | 2037 | Exited/Churn (1) | 7963
 
 - **Split Data Training dan Data Testing**:
   Tujuan utama dari kasus ini adalah memprediksi apakah pelanggan akan churn atau tidak (variabel 'Exited'). Untuk mencapai tujuan ini, kita akan membagi data menjadi dua bagian: 80% untuk melatih model (train set) dan 20% untuk menguji performanya (test set). Train set digunakan untuk mengajarkan model mengenali pola yang mengindikasikan churn, sedangkan test set digunakan untuk mengukur seberapa akurat model dalam memprediksi pelanggan baru yang akan churn.
