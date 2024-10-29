@@ -17,7 +17,7 @@ Beberapa penelitian menunjukkan bahwa biaya mempertahankan pelanggan jauh lebih 
 
 ### Goals
 
-1. Mengidentifikasi fitur-fitur yang berkontribusi untuk memprediksi keputusan churn pelanggan.
+1. Mengidentifikasi fitur-fitur yang berpengaruh untuk modeling machine learning dalam memprediksi keputusan churn pelanggan.
 2. Mengembangkan dan menguji model prediktif yang dapat memprediksi pelanggan yang berpotensi churn secara akurat. Model ini akan menggunakan data historis pelanggan dan diuji dengan beberapa algoritma machine learning untuk menentukan model yang paling efektif.
 
 ### Solution statements
@@ -258,7 +258,7 @@ Di sini, **TP** adalah True Positive, **TN** adalah True Negative, **FP** adalah
 
 <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/acc_tot.png?raw=true'></img>
 
-Setelah dilakukan modeling, didapati bahwa fitur-fitur seperti **CreditScore**, **Geography**, **Gender**, **Age**, **Tenure**, **Balance**, **NumOfProducts**, **HasCrCard**, **IsActiveMember**, dan **EstimatedSalary** memiliki pengaruh signifikan dalam memprediksi churn pelanggan. Setiap fitur ini berkontribusi dalam menentukan apakah pelanggan cenderung untuk berhenti menggunakan layanan atau tetap aktif. Hasil ini sejalan dengan tujuan awal, yaitu mengidentifikasi fitur-fitur untuk memprediksi keputusan churn pelanggan, sehingga memberikan pemahaman yang lebih mendalam kepada bank mengenai karakteristik yang perlu diperhatikan dalam strategi retensi pelanggan.
+Setelah dilakukan modeling, didapati bahwa fitur-fitur seperti **CreditScore**, **Geography**, **Gender**, **Age**, **Tenure**, **Balance**, **NumOfProducts**, **HasCrCard**, **IsActiveMember**, dan **EstimatedSalary** memiliki pengaruh signifikan dalam memprediksi churn pelanggan. Setiap fitur ini berkontribusi dalam menentukan apakah pelanggan cenderung untuk berhenti menggunakan layanan atau tetap aktif. Hasil ini sejalan dengan tujuan awal, yaitu mengidentifikasi fitur-fitur yang berpengaruh untuk modeling machine learning dalam memprediksi keputusan churn pelanggan, sehingga memberikan pemahaman yang lebih mendalam kepada bank mengenai karakteristik yang perlu diperhatikan dalam strategi retensi pelanggan.
 
 Dalam evaluasi performa model, **Random Forest** menunjukkan kinerja terbaik dengan akurasi tinggi pada set pengujian (test set) dan F1-Score yang baik untuk kedua kelas, sehingga memenuhi harapan untuk membangun model prediktif yang akurat. Sebaliknya, **Support Vector Machine** memiliki performa terendah dari segi akurasi, sedangkan **Decision Tree** memberikan keseimbangan yang baik antara precision, recall, dan F1-Score pada kedua set (train dan test). Berdasarkan hasil evaluasi, model **Random Forest** dipilih sebagai model terbaik untuk mengidentifikasi pelanggan yang berpotensi churn.
 
