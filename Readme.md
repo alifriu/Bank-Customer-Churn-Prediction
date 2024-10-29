@@ -46,83 +46,83 @@ Dataset yang digunakan merupakan dataset yang umum digunakan untuk memprediksi c
 - EstimatedSalary `float64`: Gaji perkiraan pelanggan. (ex: 101348.88)
 - Exited `int64`: Status churn (1: churn, 0: tetap).
 
-### Exploratory Data Analysis (EDA) 
+### Exploratory Data Analysis (EDA)
 
 EDA (Exploratory Data Analysis) adalah proses untuk memahami karakteristik data sebelum melakukan pemodelan. Berikut penjelasan singkat mengenai jenis EDA :
 
-  1. **Exploring Missing Value dan Duplicate Data**
-    
-  Pada dataset terdapat missing value pada beberapa kolom.Berikut penjabarannya:
-  Kolom|jml
-  ----|----
-  Geography|1
-  Age|1
-  HasCrCard|1
-  IsActiveMember|1
+1. **Exploring Missing Value dan Duplicate Data**
 
-  Terdapat juga 2 row yang memiliki nilai duplikat.
+Pada dataset terdapat missing value pada beberapa kolom.Berikut penjabarannya:
+Kolom|jml
+----|----
+Geography|1
+Age|1
+HasCrCard|1
+IsActiveMember|1
 
-  2. **Univariate Analysis**
-     Analisis ini memeriksa satu variabel pada satu waktu. Tujuannya untuk memahami distribusi, nilai rata-rata, varians, serta mendeteksi outliers.
+Terdapat juga 2 row yang memiliki nilai duplikat.
 
-  - Fitur Kategorikal
+2. **Univariate Analysis**
+   Analisis ini memeriksa satu variabel pada satu waktu. Tujuannya untuk memahami distribusi, nilai rata-rata, varians, serta mendeteksi outliers.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_cat.png?raw=true'></img>
-    **Insight** : Distribusi dari dataset yang ada menunjukan bahwa `Geography` asal dari pelanggan berasal dari 3 negara yaitu France,Spain, dan Germany.
-    Pada variabel `Gender`,terlihat bahwa jumlah pelanggan pria lebih dominan dibandingkan dengan pelanggan wanita.
+- Fitur Kategorikal
 
-  - Fitur Numerik
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_cat.png?raw=true'></img>
+  **Insight** : Distribusi dari dataset yang ada menunjukan bahwa `Geography` asal dari pelanggan berasal dari 3 negara yaitu France,Spain, dan Germany.
+  Pada variabel `Gender`,terlihat bahwa jumlah pelanggan pria lebih dominan dibandingkan dengan pelanggan wanita.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_churn.png?raw=true'></img>
+- Fitur Numerik
 
-    **Insight:** Distribusi dari pelanggan yang sudah tidak berlangganan (1) terhadap pelanggan yang masih berlangganan (0) terlihat bahwa masih banyak pelanggan yang masih berlangganan.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_churn.png?raw=true'></img>
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_hist.png?raw=true'></img>
-    Persebaran data dari tiap variabel pada dataset
+  **Insight:** Distribusi dari pelanggan yang sudah tidak berlangganan (1) terhadap pelanggan yang masih berlangganan (0) terlihat bahwa masih banyak pelanggan yang masih berlangganan.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_boxplot.png?raw=true'></img>
-    Boxplot merupakan visualisasi yang efektif untuk mendeteksi data pencilan (outlier) pada variabel numerik. Dengan menampilkan kuartil data, boxplot memberikan gambaran jelas tentang sebaran data dan mengidentifikasi nilai-nilai ekstrem yang berada di luar jangkauan interkuartil. Titik-titik data yang terletak di luar 'kumis' boxplot umumnya dianggap sebagai outlier.
-    Variabel Creditscore dan Age memiliki data outlier yang cukup banyak jika dibandingkan dengan variabel lainnya.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_hist.png?raw=true'></img>
+  Persebaran data dari tiap variabel pada dataset
 
-    3. **Bivariate Analysis**
-       Analisis ini mengevaluasi hubungan antara dua variabel. Tujuan utamanya adalah untuk menemukan korelasi atau pola antara dua fitur.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/uni_boxplot.png?raw=true'></img>
+  Boxplot merupakan visualisasi yang efektif untuk mendeteksi data pencilan (outlier) pada variabel numerik. Dengan menampilkan kuartil data, boxplot memberikan gambaran jelas tentang sebaran data dan mengidentifikasi nilai-nilai ekstrem yang berada di luar jangkauan interkuartil. Titik-titik data yang terletak di luar 'kumis' boxplot umumnya dianggap sebagai outlier.
+  Variabel Creditscore dan Age memiliki data outlier yang cukup banyak jika dibandingkan dengan variabel lainnya.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_churnGeo.png?raw=true'></img>
+  3. **Bivariate Analysis**
+     Analisis ini mengevaluasi hubungan antara dua variabel. Tujuan utamanya adalah untuk menemukan korelasi atau pola antara dua fitur.
 
-    **Insight:** bedasarkan persebaran churn berdasarkan geography,France menjadi negara terbanyak memiliki pelanggan loyal dan churn disaat yang bersamaan.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_churnGeo.png?raw=true'></img>
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_churnGen.png?raw=true'></img>
+  **Insight:** bedasarkan persebaran churn berdasarkan geography,France menjadi negara terbanyak memiliki pelanggan loyal dan churn disaat yang bersamaan.
 
-    **Insight:** bedasarkan persebaran churn berdasarkan Gender,Wanita sedikit lebih banyak yang berhenti menggunakan layanan dibandingkan pria.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_churnGen.png?raw=true'></img>
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_density.png?raw=true'></img>
+  **Insight:** bedasarkan persebaran churn berdasarkan Gender,Wanita sedikit lebih banyak yang berhenti menggunakan layanan dibandingkan pria.
 
-    Density plot merupakan visualisasi yang berguna untuk menggambarkan distribusi dari kepadatan suatu variabel.Berdasarkan data yang ada,kepadatan dari pelanggan yang tidak churn pada masing masing variabel lebih banyak jika dibandingkan dengan pelanggan yang churn.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/bi_density.png?raw=true'></img>
 
-    4. **Multivariate Analysis**
-       Analisis ini melibatkan lebih dari dua variabel sekaligus. Ini bertujuan untuk melihat interaksi kompleks antar variabel dan pola tersembunyi dalam data.
+  Density plot merupakan visualisasi yang berguna untuk menggambarkan distribusi dari kepadatan suatu variabel.Berdasarkan data yang ada,kepadatan dari pelanggan yang tidak churn pada masing masing variabel lebih banyak jika dibandingkan dengan pelanggan yang churn.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/multi_avgbal.png?raw=true'></img>
+  4. **Multivariate Analysis**
+     Analisis ini melibatkan lebih dari dua variabel sekaligus. Ini bertujuan untuk melihat interaksi kompleks antar variabel dan pola tersembunyi dalam data.
 
-    **Insight:** Dari Rata-rata saldo pelangan di tiap Negara,German menjadi negarara yang memiliki rata-rata saldo tertinggi diantara dua negara yang lain.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/multi_avgbal.png?raw=true'></img>
 
-    untuk mengamati hubungan antara fitur numerik,akan dilakukan visualisasi menggunakan pairplot dan untuk mengobservasi korelasi antara fitur numerik,akan dilakukan visualisasi menggunakan heatmap.
+  **Insight:** Dari Rata-rata saldo pelangan di tiap Negara,German menjadi negarara yang memiliki rata-rata saldo tertinggi diantara dua negara yang lain.
 
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/multi_pairplot.png?raw=true'></img>
-    <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/conf_matrix.png?raw=true'></img>
+  untuk mengamati hubungan antara fitur numerik,akan dilakukan visualisasi menggunakan pairplot dan untuk mengobservasi korelasi antara fitur numerik,akan dilakukan visualisasi menggunakan heatmap.
 
-    **Insight:** berdasarkan visualisasi diatas,hubungan korelasi antar variabel bisa dibilang cukup rendah.
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/multi_pairplot.png?raw=true'></img>
+  <img src='https://github.com/alifriu/Bank-Customer-Churn_Prediction/blob/master/src/conf_matrix.png?raw=true'></img>
+
+  **Insight:** berdasarkan visualisasi diatas,hubungan korelasi antar variabel bisa dibilang cukup rendah.
 
 ## Data Preparation
- - **Handling Minssing Value dan Duplicate data**
 
-    Beberapa baris terdapat missing value dan duplicate value di dalamnya,metode yang diterapkan antara lain :
+- **Handling Minssing Value dan Duplicate data**
 
-    - Mengisi nilai missing value dengan menggunakan metode ffill.Ini bertujuan untuk mengisi nilai baris yang kosong pada kolom `HasCrCard` dan `IsActiveMember` dengan nilai baris sebelumnya.
-    - Variabel `Geography` bertipe data kategorikal sehingga dapat diisi nilainya dengan menggunakan modus yang ada pada kolom.Ini bertujuan untuk memperkecil Variasi data yang ada pada kolom.
-    - Dikarenakan variabel `Age` bertipe numerik, dapat dilakukan proses handling missing value dengan menggantinya denga nilai median.Metode ini bertujuan untuk meminimalisir magnitude dari skew dan outlier pada kolom.
-    - Drop baris yang memiliki nilai duplikat dari baris lain dan mengecek apakah nilai duplikat masih ada atau tidak
+  Beberapa baris terdapat missing value dan duplicate value di dalamnya,metode yang diterapkan antara lain :
 
+  - Mengisi nilai missing value dengan menggunakan metode ffill.Ini bertujuan untuk mengisi nilai baris yang kosong pada kolom `HasCrCard` dan `IsActiveMember` dengan nilai baris sebelumnya.
+  - Variabel `Geography` bertipe data kategorikal sehingga dapat diisi nilainya dengan menggunakan modus yang ada pada kolom.Ini bertujuan untuk memperkecil Variasi data yang ada pada kolom.
+  - Dikarenakan variabel `Age` bertipe numerik, dapat dilakukan proses handling missing value dengan menggantinya denga nilai median.Metode ini bertujuan untuk meminimalisir magnitude dari skew dan outlier pada kolom.
+  - Drop baris yang memiliki nilai duplikat dari baris lain dan mengecek apakah nilai duplikat masih ada atau tidak
 
 - **Enkoding Fitur Kategorikal**:
   Untuk memungkinkan algoritma machine learning memproses kolom bertipe data kategorikal seperti 'Geography' dan 'Gender', kita perlu mengubahnya menjadi format numerik. Proses ini disebut encoding. Setiap kategori unik dalam variabel tersebut akan diubah menjadi vektor biner, di mana hanya satu nilai yang akan bernilai 1 (true) dan sisanya 0. Dengan demikian, informasi dari variabel kategorikal dapat dimasukkan secara efektif ke dalam model.
@@ -130,11 +130,11 @@ EDA (Exploratory Data Analysis) adalah proses untuk memahami karakteristik data 
 - **Resample untuk Data Kelas Minoritas**:
   Teknik resample data adalah suatu metode yang digunakan dalam pra-pemrosesan data, khususnya dalam Machine Learning, untuk mengatasi ketidakseimbangan kelas (imbalanced class) dalam dataset. Ketidakseimbangan kelas terjadi ketika jumlah data pada satu kelas jauh lebih banyak daripada kelas lainnya. Kondisi ini dapat menyebabkan model Machine Learning menjadi bias terhadap kelas mayoritas dan mengabaikan kelas minoritas.
 
-    Dalam Dataset yang digunakan,Kolom Exited untuk kelas
-    Sebelum Oversampling | Jumlah | Sedudah OverSampling | Jumlah
-    --------|---------|-------|-----|
-    Tidak Exited/Churn (0) | 7963 | Tidak Exited/Churn (0) | 7963
-    Exited/Churn (1) | 2037 | Exited/Churn (1) | 7963
+  Dalam Dataset yang digunakan,Kolom Exited untuk kelas
+  Sebelum Oversampling | Jumlah | Sedudah OverSampling | Jumlah
+  --------|---------|-------|-----|
+  Tidak Exited/Churn (0) | 7963 | Tidak Exited/Churn (0) | 7963
+  Exited/Churn (1) | 2037 | Exited/Churn (1) | 7963
 
 - **Split Data Training dan Data Testing**:
   Tujuan utama dari kasus ini adalah memprediksi apakah pelanggan akan churn atau tidak (variabel 'Exited'). Untuk mencapai tujuan ini, kita akan membagi data menjadi dua bagian: 80% untuk melatih model (train set) dan 20% untuk menguji performanya (test set). Train set digunakan untuk mengajarkan model mengenali pola yang mengindikasikan churn, sedangkan test set digunakan untuk mengukur seberapa akurat model dalam memprediksi pelanggan baru yang akan churn.
@@ -181,7 +181,7 @@ Model yang digunakan dalam proses pemodelan antara lain Decision Tree Classifier
    - kernel : Menentukan jenis kernel yang akan digunakan dalam algoritma. `['linear', 'poly', 'rbf', 'sigmoid']`
    - gamma : Koefisien kernel untuk 'rbf', 'poli' dan 'sigmoid'. `['scale', 'auto']`
 
-   Hyperparameter terbaik setelah tunning :  `{'C': 1, 'gamma': 'auto', 'kernel': 'rbf'}`
+   Hyperparameter terbaik setelah tunning : `{'C': 1, 'gamma': 'auto', 'kernel': 'rbf'}`
 
 3. **Random Forest Classifier :** Random Forest adalah metode ensemble yang menggabungkan beberapa Decision Tree untuk membuat prediksi yang lebih akurat dan stabil. Algoritma ini membuat banyak pohon keputusan dengan memilih subset data dan fitur secara acak untuk setiap pohon, dan hasil akhir ditentukan dengan voting atau rata-rata dari hasil pohon-pohon tersebut.
 
