@@ -22,7 +22,7 @@ Beberapa penelitian menunjukkan bahwa biaya mempertahankan pelanggan jauh lebih 
 
 ### Solution statements
 
-1. Membangun model prediksi menggunakan tiga algoritma machine learning: Logistic Regression, Support Vector Machine (SVM), dan Random Forest.
+1. Membangun model prediksi menggunakan tiga algoritma machine learning: Decision Tree, Support Vector Machine (SVM), dan Random Forest.
 2. Melakukan perbandingan kinerja model dalam memprediksi pelanggan yang kemungkinan besar churn dengan menggunakan metrik evaluasi seperti akurasi, presisi, recall, dan F1-score. Hasil perbandingan ini akan membantu bank memilih algoritma yang paling akurat dalam mengidentifikasi pelanggan yang berpotensi churn.
 
 ## Data Understanding
